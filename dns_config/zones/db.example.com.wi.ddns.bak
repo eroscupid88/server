@@ -1,0 +1,19 @@
+$ORIGIN .
+$TTL 604800	; 1 week
+example.com		IN SOA	ns1.example.com. hostmaster.example.com. (
+				10053      ; serial
+				604800     ; refresh (1 week)
+				86400      ; retry (1 day)
+				2419200    ; expire (4 weeks)
+				604800     ; minimum (1 week)
+				)
+			NS	ns1.example.com.
+$ORIGIN example.com.
+dhcpserver		A	10.0.2.4
+ds1			A	10.0.2.6
+mai			A	10.0.2.7
+ns1			A	10.0.2.5
+$TTL 600	; 10 minutes
+pro-10-0-2-102		A	10.0.2.102
+			DHCID	( AAAB91gk3GalphIdT1r4LsRd4EUfpuA6SNQ+wpxijRwx
+				vIk= ) ; 0 1 32
